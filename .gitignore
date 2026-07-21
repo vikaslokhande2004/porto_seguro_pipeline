@@ -1,0 +1,32 @@
+# Data files (too large for git)
+raw/
+*.csv
+*.parquet
+*.gz
+*.zip
+*.tar
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Configs with secrets
+config/.env.prod
+config/.env.staging
+*.env
+
+# IDE
+.DS_Store
+.vscode/
+.idea/
+
+# Logs and temp
+logs/
+*.log
+.ipynb_checkpoints/
