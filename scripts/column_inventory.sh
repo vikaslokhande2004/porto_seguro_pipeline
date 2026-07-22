@@ -4,7 +4,7 @@
 # Purpose: Generate column-level inventory
 #          for wide CSV files
 # Usage  : ./scripts/column_inventory.sh
-#          raw/bronze/porto_claims.csv
+#          bronze/porto_claims.csv
 # ============================================
 
 set -euo pipefail
