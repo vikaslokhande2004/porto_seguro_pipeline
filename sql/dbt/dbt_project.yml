@@ -1,0 +1,14 @@
+name: 'porto_seguro_dbt'
+version: '1.0.0'
+config-version: 2
+
+profile: 'porto_seguro_dbt'
+
+model-paths: ["models"]
+
+models:
+  porto_seguro_dbt:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

@@ -1,0 +1,8 @@
+version: 2
+models:
+  - name: fact_claims
+    columns:
+      - name: claim_key
+        tests: [unique, not_null]
+      - name: total_claim_amount
+        tests: [not_null]

@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: raw
+    database: project-67b57b05-9d71-4830-968
+    schema: insurance_raw
+    tables:
+      - name: raw_claims
