@@ -5,3 +5,4 @@ pyarrow==14.0.0
 sqlalchemy
 python-dotenv==1.0.0
 loguru==0.7.2
+anthropic

@@ -262,7 +262,6 @@ def replace_sentinel_with_null(df):
 
 
 def add_null_density_column(df, cols):
-
     """
     Add data quality metrics.
 
@@ -274,52 +273,19 @@ def add_null_density_column(df, cols):
     """
 
     if not cols:
-        logger.warning(
-            "No columns available for "
-            "null density calculation."
-        )
+        logger.warning("No columns available for " "null density calculation.")
 
-        return (
-            df
-            .withColumn(
-                "null_field_count",
-                lit(0)
-            )
-            .withColumn(
-                "data_completeness_pct",
-                lit(100.0)
-            )
+        return df.withColumn("null_field_count", lit(0)).withColumn(
+            "data_completeness_pct", lit(100.0)
         )
 
     null_check_expr = builtins.sum(
-        [
-            when(
-                col(c).isNull(),
-                1
-            ).otherwise(0)
-
-            for c in cols
-        ]
+        [when(col(c).isNull(), 1).otherwise(0) for c in cols]
     )
 
-    return (
-        df
-        .withColumn(
-            "null_field_count",
-            null_check_expr
-        )
-        .withColumn(
-            "data_completeness_pct",
-            round(
-                (
-                    lit(len(cols))
-                    - col("null_field_count")
-                )
-                * 100.0
-                / lit(len(cols)),
-                1
-            )
-        )
+    return df.withColumn("null_field_count", null_check_expr).withColumn(
+        "data_completeness_pct",
+        round((lit(len(cols)) - col("null_field_count")) * 100.0 / lit(len(cols)), 1),
     )
 
 
@@ -543,8 +509,7 @@ if __name__ == "__main__":
     main()
 
 
-
-'''
+"""
 Bronze CSV
     │
     ▼
@@ -583,4 +548,4 @@ Silver Parquet
     ├── risk_bucket=LOW_RISK/
     ├── risk_bucket=MEDIUM_RISK/
     └── risk_bucket=HIGH_RISK/
-'''
+"""
