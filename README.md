@@ -827,9 +827,3 @@ Technologies:
 ```text
 Python | PySpark | SQL | BigQuery | Dataform | dbt | Airflow | Git | GitHub
 ```
-
----
-
-# 📄 License
-This project is created for educational and portfolio purposes.
-````
