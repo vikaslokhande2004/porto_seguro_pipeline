@@ -1,7 +1,3 @@
-Absolutely. Below is a professional `README.md` tailored to your **Porto Seguro Insurance Dimensional Analytics Pipeline** project and the architecture you built.
-
-Copy everything below into your project's `README.md` file.
-
 ````markdown
 # Porto Seguro Insurance Dimensional Analytics Pipeline
 
@@ -777,23 +773,6 @@ dbt tests are executed automatically as part of the pipeline.
 
 ---
 
-# 🤖 LLM-Augmented Extraction
-
-An optional LLM-based extraction phase was considered for extracting structured information from insurance adjuster notes.
-
-The proposed fields included:
-
-* Incident category
-* At-fault party
-* Injury mentioned
-* Severity hint
-
-This phase was intentionally skipped because it was a **bonus/non-core exercise** and requires an external LLM API.
-
-The core pipeline does not depend on an LLM API.
-
----
-
 # 📚 Key Learning Outcomes
 
 This project demonstrates practical experience with:
@@ -856,25 +835,3 @@ Python | PySpark | SQL | BigQuery | Dataform | dbt | Airflow | Git | GitHub
 This project is created for educational and portfolio purposes.
 
 ````
-
-### My recommendation before pushing
-
-Since your actual structure uses:
-
-```text
-sql/dbt/
-sql/dataform/
-````
-
-and you **skipped the LLM phase**, this README matches your final project much better than the earlier version.
-
-After adding it:
-
-```bash
-cd /mnt/d/porto_seguro_pipeline
-git add README.md
-git commit -m "Add project documentation"
-git push origin main
-```
-
-Then your GitHub repository will have a professional overview of the entire pipeline and architecture.
